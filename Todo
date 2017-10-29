@@ -1,0 +1,22 @@
+In this assignment, you'll work on transparency of Logistic Regression. You need a "binary classification" dataset (two classes). All features need to be either binary or continuous. Do not binarize the continous features; binarize only the categorical features using on-hot encoding. The binarized features should have proper names according to the binarization. Ask me if you are uncertain about any of this.
+
+1.Choose a binary classification dataset. 
+ -binarize the categorical features, if any.
+ -If the dataset already comes in train-test split, great. If not, create a train-test split, using 2/3 for train and 1/3 for test.
+ -Important features
+ -Train an L2-regularized LogisticRegression classifier on the train split; use the default parameters for all, except penalty should be set to l2.
+    -Print the top 10 features and their weights (i.e., the features that have the highest absolute values).
+  -Train an L1-regularized LogisticRegression classifier on the train split; use the default parameters for all, except penalty should be set to l1.
+    -Print the top 10 features and their weights (i.e., the features that have the highest absolute values).
+  -Train a DecisionTreeClassifier  on the train split; use the default parameters for all, except max_depth=6, min_impurity_decrease=0.005.
+  -Visualize your tree in the notebook itself.
+  -Discuss your results.
+  -Now z-score all features using StandardScaler. z-score both train and test. use fit_transform on train, and transform on test.
+  -Repeat steps 1-4 (i.e., train L2-LR, print top 10 features and their weights, and so on) using the scaled version of the data and discuss your results.
+  -Evidence (on z-scored data)
+  -Using the z-scored version of the data, for the following types of objects, create a section, and print a) the total positive evidence,  b) the total negative evidence, c) probability distribution, d) top 3 feature values that contribute most to the positive evidence, e) top 3 feature values that contribute the most to the negative evidence. Print this information on the following object types
+    -The most positive object with respect to the probabilities.
+    -The most negative object with respect to the probabilities.
+    -The object that has the largest positive evidence.
+    -The object that has the largest (in magnitude) negative evidence.
+    -The most uncertain object (the probabilities are closest to 0.5)
